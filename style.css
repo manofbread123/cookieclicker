@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+#cookieButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#cookie {
+    width: 200px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.achievements {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.achievements h2 {
+    font-size: 24px;
+}
+
+.achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievements li {
+    margin: 5px 0;
+}
