@@ -45,8 +45,9 @@ cookieButton.addEventListener('click', () => {
 });
 
 autoClickerButton.addEventListener('click', () => {
-    if (score >= 10) {
-        score -= 10;
+    const cost = Math.ceil(10 * Math.pow(1.1, autoClickers));
+    if (score >= cost) {
+        score -= cost;
         autoClickers++;
         scoreDisplay.textContent = score;
         setInterval(() => {
@@ -58,15 +59,18 @@ autoClickerButton.addEventListener('click', () => {
         updateAchievements();
         saveGame();
     }
+    autoClickerButton.textContent = `Buy Auto-Clicker (${Math.ceil(10 * Math.pow(1.1, autoClickers))} cookies)`;
 });
 
 upgradeButton.addEventListener('click', () => {
-    if (score >= 20) {
-        score -= 20;
+    const cost = Math.ceil(20 * Math.pow(1.2, cookiesPerClick - 1));
+    if (score >= cost) {
+        score -= cost;
         cookiesPerClick++;
         scoreDisplay.textContent = score;
         saveGame();
     }
+    upgradeButton.textContent = `Upgrade Click (${Math.ceil(20 * Math.pow(1.2, cookiesPerClick - 1))} cookies)`;
 });
 
 window.onload = loadGame;
